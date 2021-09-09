@@ -4,8 +4,8 @@
 #Don't Copy Or Edit Codes,Respect The Coder
 install_sqlmap () {
 echo -e "\e[1;33mWait ! Installing SQLMAP\e[0m"
-command -v python2 >/dev/null || pkg install python2
-command -v git >/dev/null || pkg install git
+command -v python2 >/dev/null || pkg install python2 -y
+command -v git >/dev/null || pkg install git -y
 cd $PREFIX/share
 git clone https://github.com/sqlmapproject/sqlmap
 echo "python2 $PREFIX/share/sqlmap/sqlmap.py \$@" >$PREFIX/bin/sqlmap
